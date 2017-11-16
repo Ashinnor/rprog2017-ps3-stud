@@ -1,0 +1,37 @@
+---
+title: "R Programming"
+author: "Alex & Antho"
+date: "16 novembre 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary of Iris dataset
+
+```{r iris}
+summary(iris)
+```
+
+
+```{r pressure, echo=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+ggplot(data=iris,mapping=aes(x=Sepal.Length,y=Petal.Length))+
+  geom_point(mapping=aes(x=Sepal.Length,y=Petal.Length))
+```
+
+```{r,echo=FALSE}
+student <- c('Anthony','Alexandre')
+salary <- c(12, 500000)
+lol <- data.frame(student, salary, stringsAsFactors=FALSE)
+```
+```{r}
+lol
+```
+
